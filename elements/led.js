@@ -5,7 +5,7 @@ module.exports = (attrs) => {
   const style = `
     width: ${attrs.size};
     height: ${attrs.size};
-    background: ${attrs.on ? 'red': 'pink'};
+    background: ${attrs.on ? 'blue': 'lightblue'};
     border-radius: 50%;
   `
   return html`
