@@ -7,6 +7,7 @@ module.exports = (attrs) => {
     height: ${attrs.size};
     background: ${attrs.on ? 'blue': 'lightblue'};
     border-radius: 50%;
+    margin: 0.3em;
   `
   return html`
     <div style=${style} />

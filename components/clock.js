@@ -12,12 +12,14 @@ module.exports = (attrs) => {
   const timeString = clock.toLocaleTimeString('en-US', {hour12: false}).split(':').join('')
   return html`
     <div style=${style}>
-      <digit value=${timeString[0]} />
-      <digit value=${timeString[1]} />
-      <digit value=${timeString[2]} />
-      <digit value=${timeString[3]} />
-      <digit value=${timeString[4]} />
-      <digit value=${timeString[5]} />
+      <digit size="5em" value=${timeString[0]} />
+      <digit size="5em" value=${timeString[1]} />
+      <div style="width: 1.8em;" />
+      <digit size="5em" value=${timeString[2]} />
+      <digit size="5em" value=${timeString[3]} />
+      <div style="width: 1.8em;" />
+      <digit size="5em" value=${timeString[4]} />
+      <digit size="5em" value=${timeString[5]} />
     </div>
   `
 }

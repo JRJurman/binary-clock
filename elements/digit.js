@@ -9,10 +9,10 @@ module.exports = (attrs) => {
 
   return html`
     <div>
-      <led size="3em" ${paddedValue[0] === '1' ? 'on' : ''} />
-      <led size="3em" ${paddedValue[1] === '1' ? 'on' : ''} />
-      <led size="3em" ${paddedValue[2] === '1' ? 'on' : ''} />
-      <led size="3em" ${paddedValue[3] === '1' ? 'on' : ''} />
+      <led size=${attrs.size} ${paddedValue[0] === '1' ? 'on' : ''} />
+      <led size=${attrs.size} ${paddedValue[1] === '1' ? 'on' : ''} />
+      <led size=${attrs.size} ${paddedValue[2] === '1' ? 'on' : ''} />
+      <led size=${attrs.size} ${paddedValue[3] === '1' ? 'on' : ''} />
     </div>
   `
 }
