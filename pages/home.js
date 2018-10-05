@@ -1,19 +1,15 @@
 const Tram = require('tram-one')
 const html = Tram.html({
-  'app-header': require('../elements/app-header')
+  'clock': require('../components/clock')
 })
 
 module.exports = (store, actions) => {
-  const advanceColor = () => {
-    actions.advance()
+  if (store.ticker === null) {
+    actions.startTicking(300)
   }
   return html`
     <div>
-      <app-header color=${store.color} onclick=${advanceColor} />
-      <div>
-        Thank you for using Tram-One!<br />
-        To get started, edit <code>binary-clock/pages/home.js</code>.
-      </div>
+      <clock />
     </div>
   `
 }

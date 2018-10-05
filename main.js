@@ -4,5 +4,8 @@ require("babel-polyfill")
 const app = new Tram()
 app.addRoute('/', require('./pages/home'))
 app.addRoute('/404', require('./pages/404'))
-app.addActions({ color: require('./actions/color') })
+app.addActions({
+  clock: require('./actions/clock'),
+  ticker: require('./actions/ticker')
+})
 app.start('.main')
