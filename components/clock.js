@@ -4,12 +4,12 @@ const html = Tram.html({
 })
 
 module.exports = (attrs) => {
+  const {clock} = window.engine.store
   const style = `
     display: flex;
     justify-content: center;
   `
-  const time = new Date()
-  const timeString = time.toLocaleTimeString('en-US', {hour12: false}).split(':').join('')
+  const timeString = clock.toLocaleTimeString('en-US', {hour12: false}).split(':').join('')
   return html`
     <div style=${style}>
       <digit value=${timeString[0]} />
