@@ -5,7 +5,7 @@ module.exports = (attrs) => {
   const style = `
     width: ${attrs.size};
     height: ${attrs.size};
-    background: ${attrs.on ? 'blue': 'lightblue'};
+    background: ${attrs.on ? 'blue' : 'lightblue'};
     border-radius: 50%;
     margin: 0.3em;
   `
@@ -13,4 +13,3 @@ module.exports = (attrs) => {
     <div style=${style} />
   `
 }
-
